@@ -106,25 +106,21 @@ docker
 ````
 
 ### configure tools in Manage Jenkins-> Tools
-<img width="1920" height="836" alt="image" src="https://github.com/user-attachments/assets/15c89fa2-5e98-432e-9687-9b8ead0edafa" />
-<img width="1917" height="826" alt="image" src="https://github.com/user-attachments/assets/21c55a7c-0fe7-49f6-bf26-e7c547692e1c" />
-
+![project](./images/p1.png)
+![project](./images/p2.png)
 
 ### add credentials 
 
-<img width="1892" height="498" alt="image" src="https://github.com/user-attachments/assets/9d473b5b-1945-4b53-a649-54aab597e9ea" />
-<img width="674" height="610" alt="image" src="https://github.com/user-attachments/assets/39c52b8e-659c-4405-b988-9abae67533b9" />
-<img width="666" height="585" alt="image" src="https://github.com/user-attachments/assets/6273c9a3-7eb2-413b-b569-72c258cca273" />
-
-
-
+![project](./images/p3.png)
+![project](./images/p4.png)
+![project](./images/p5.png)
 ### Click on Dashboard and create new project and select project type as *pipeline* project
 
 
 
 ### setup webhook
-<img width="1176" height="871" alt="image" src="https://github.com/user-attachments/assets/0efbdf6d-0971-4543-96aa-d055153c3185" />
-
+![project](./images/webhook.png)
+![project](./images/p7.png)
 
 ```groovy
 pipeline {

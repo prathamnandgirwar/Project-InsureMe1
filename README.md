@@ -137,7 +137,7 @@ pipeline {
     stages {
         stage('code-pull'){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mukundDeo9325/Project-InsureMe1.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prathamnandgirwar/Project-InsureMe1.git']])
             }
         }
         stage('code-build'){
@@ -176,7 +176,7 @@ pipeline {
         }
        stage('docker-image'){
             steps{
-                sh 'docker build -t mukunddeo9325/insuremeB .'
+                sh 'docker build -t prathamnandgiwar/insureme .'
                 
             }
         }
@@ -185,14 +185,14 @@ pipeline {
             steps {
        	       withCredentials([usernamePassword(credentialsId: 'docker-cred', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
             	sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-                sh 'docker push mukunddeo9325/insuremeB'
+                sh 'docker push prathamnandgiwar/insureme'
                }
             }
         } 
         
         stage('code-deploy'){
             steps{
-                sh 'docker run -itd --name insure-me -p 8089:8081 mukunddeo9325/insuremeB'
+                sh 'docker run -itd --name insure-me -p 8089:8081 prathamnandgiwar/insureme'
             }
         }
     }
